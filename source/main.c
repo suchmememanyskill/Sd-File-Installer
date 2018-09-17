@@ -116,24 +116,24 @@ int main(int argc, char* argv[])
 	printf("   SD Files Installer, By Such Meme, Many Skill");
 	printf("\x1b[30;1HPress A to apply, Dpad to move the cursor");
 
-	printf("\x1b[3;1H\x1b[32m----------------------.CIA------------------------\x1b[37m");
-	printf("\x1b[4;3H[ ] Anemone3ds v2.0.1 by astronautlevel2"); //A
-	printf("\x1b[5;3H[ ] Checkpoint v3.4.2 by BernardoGiordano") ; //B
-	printf("\x1b[6;3H[ ] Homebrewlauncher v1.0 by mariohackandglitch"); //C
-	printf("\x1b[7;3H[ ] DSP1 v1.0 by zoogie"); //D
-	printf("\x1b[8;3H[ ] Lumaupdater v2.3 by KunoichiZ"); //E
-	printf("\x1b[9;3H[ ] FBI v2.5.3 by Steveice10 (.cia)"); //F
+	printf("\x1b[3;1H\x1b[32m------------------Emulators&Games------------------\x1b[37m");
+	printf("\x1b[4;3H[ ] Snes9X"); //A
+	printf("\x1b[5;3H[ ] GameYob") ; //B
+	printf("\x1b[6;3H[ ] mGBA"); //C
+	printf("\x1b[7;3H[ ] VirtualNES"); //D
+	printf("\x1b[8;3H[ ] Cookie Clicker v1.0 by TheMachinumps"); //E
+	printf("\x1b[9;3H[ ] 2048-3ds v0.3.2 by MrJPGames"); //F
 
-	printf("\x1b[11;1H\x1b[32m----------------------.3DSX-----------------------\x1b[37m");
-	printf("\x1b[12;3H[ ] ctrnotimeoffset v1.0 by ihaveamac"); //G
-	printf("\x1b[13;3H[ ] FBI v2.5.3 by Steveice10 (.3dsx)"); //H
+	printf("\x1b[11;1H\x1b[32m------------------Save Manageing------------------\x1b[37m");
+	printf("\x1b[12;3H[ ] JKSM by J_D_K"); //G
+	printf("\x1b[13;3H[ ] PKSM v5.1.4 by BernardoGiordano"); //H
 
-	printf("\x1b[15;1H\x1b[32m----------------------Luma------------------------\x1b[37m");
-	printf("\x1b[16;3H[ ] GodMode9 v1.7.1 by d0k3"); //I
-	printf("\x1b[17;3H[ ] Luma3DS v9.1 by AuroraWright"); //J
+	printf("\x1b[15;1H\x1b[32m-----------------Theme Manageing------------------\x1b[37m");
+	printf("\x1b[16;3H[ ] Anemone3ds by astronautlevel2"); //I
+	printf("\x1b[17;3H[ ] GYTB by MrCheeze"); //J
 
 	printf("\x1b[19;1H\x1b[32m---------------------Extras-----------------------\x1b[37m");
-	printf("\x1b[20;3H[ ] CVS v1.0.2 by BernardoGiordano (.cia)"); //K
+	printf("\x1b[20;3H[ ] PlayCoin setter by MrCheeze"); //K
 	printf("\x1b[21;3H[ ] FTPD v2.2 by mtheall (.cia)"); //L
 
 
@@ -180,145 +180,143 @@ int main(int argc, char* argv[])
 
 consoleInit(GFX_TOP, &topScreen);
 printf("\x1b[30;1HThis might take a while, sit back and relax");
-printf("\x1b[1;1H\x1b[32m--------.CIA Files (Install them via fbi)---------\x1b[37m");
-mkdir("sdmc:/cias/", 0777);
+printf("\x1b[1;1H\x1b[32m--------------------------------------------------\x1b[37m");
 mkdir("sdmc:/3ds/", 0777);
 printf("\x1b[1;1H");
 
 if (A == true){
 printf("\n");
-Q = "Anemone3ds";
-O = "997KB";
+Q = "Snes9X";
+O = "2052KB";
 
-copy("romfs:/Anemone3DS.cia", "/cias/Anemone3DS.cia");
+copy("romfs:/snes9x_3ds.3dsx", "/3ds/snes9x_3ds.3dsx");
 }
 
 if (B == true){
 printf("\n");
 
-Q = "Checkpoint";
-O = "509KB";
+Q = "GameYob";
+O = "1001KB";
 
-copy("romfs:/Checkpoint.cia", "/cias/Checkpoint.cia");
+copy("romfs:/GameYob.3dsx", "/3ds/GameYob.3dsx");
 }
 
 if (C == true){
 printf("\n");
 
-Q = "Homebrew_launcher";
-O = "369KB";
+Q = "mGBA";
+O = "1385KB";
 
-copy("romfs:/Homebrew_Launcher.cia", "/cias/Homebrew_Launcher.cia");
+copy("romfs:/mgba.3dsx", "/3ds/mgba.3dsx");
 }
 
 if (D == true){
 printf("\n");
 
-Q = "DSP1";
-O = "235KB";
+Q = "VirtualNES";
+O = "1090KB";
 
-copy("romfs:/DSP1.cia", "/cias/DSP1.cia");
+copy("romfs:/virtuanes_3ds.3dsx", "/3ds/virtuanes_3ds.3dsx");
 }
 
 if (E == true){
 printf("\n");
 
-Q = "Lumaupdater";
-O = "1458KB";
+Q = "Cookie Clicker 3DS";
+O = "202KB";
 
-copy("romfs:/lumaupdater.cia", "/cias/lumaupdater.cia");
+copy("romfs:/CookieClicker3DS.3dsx", "/3ds/CookieClicker3DS.3dsx");
 }
 
 if (F == true){
 printf("\n");
 
-Q = "FBI (.cia)";
-O = "781KB";
+Q = "2048";
+O = "436KB";
 
-copy("romfs:/FBI.cia", "/cias/FBI.cia");
+copy("romfs:/2048-3D.3dsx", "/3ds/2048-3D.3dsx");
+}
+
+if (G == true){
+printf("\n");
+
+Q = "JKSM";
+O = "1453KB";
+
+copy("romfs:/JKSM.3dsx", "/3ds/JKSM.3dsx");
+}
+
+if (H == true){
+printf("\n");
+
+Q = "PKSM";
+O = "2853KB";
+
+copy("romfs:/PKSM.3dsx", "/3ds/PKSM.3dsx");
+}
+
+if (I == true){
+printf("\n");
+
+Q = "Anemone3ds";
+O = "650KB";
+
+copy("romfs:/Anemone3DS.3dsx", "/3ds/Anemone3DS.3dsx");
+}
+
+if (J == true){
+printf("\n");
+mkdir("sdmc:/3ds/GYTB/", 0777);
+
+Q = "GYTB";
+O = "310KB";
+
+copy("romfs:/GYTB.3dsx", "/3ds/GYTB/GYTB.3dsx");
+
+printf("\n");
+
+Q = "GYTB.xml";
+O = "1KB";
+
+copy("romfs:/GYTB.xml", "/3ds/GYTB/GYTB.xml");
+
+mkdir("sdmc:/3ds/GYTB/badges/", 0777);
+printf("\n");
+
+Q = "Badge1";
+O = "6KB";
+
+copy("romfs:/Lenny.00021700.png", "/3ds/GYTB/badges/Lenny.00021700.png");
+
+printf("\n");
+
+Q = "Badge2";
+O = "14KB";
+
+copy("romfs:/ElfsWorld.png", "/3ds/GYTB/badges/ElfsWorld.png");
 }
 
 if (K == true){
 printf("\n");
 
-Q = "Custom Version Setter";
-O = "293KB";
+Q = "PlayCoin Setter";
+O = "228KB";
 
-copy("romfs:/CVS.cia", "/cias/CVS.cia");
+copy("romfs:/playcoin.3dsx", "/3ds/playcoin.3dsx");
 }
 
 if (L == true){
 printf("\n");
 
 Q = "FTPD";
-O = "571KB";
+O = "261KB";
 
-copy("romfs:/ftpd.cia", "/cias/ftpd.cia");
-}
-
-printf("\n\n\x1b[32m----.3DSX Files (Open them using Hb launcher)-----\x1b[37m");
-
-
-if (G == true){
-printf("\n");
-
-Q = "ctrnotimeoffset";
-O = "218KB";
-
-copy("romfs:/ctr-no-timeoffset.3dsx", "/3ds/ctr-no-timeoffset.3dsx");
-}
-
-if (H == true){
-printf("\n");
-
-Q = "Fbi (.3dsx)";
-O = "555KB";
-
-copy("romfs:/FBI.3dsx", "/3ds/FBI.3dsx");
-}
-
-printf("\n\n\x1b[32m-------.firm Files (System Critical Files)--------\x1b[37m");
-
-if (I == true){
-printf("\n");
-
-Q = "GodMode9";
-O = "416KB";
-
-mkdir("sdmc:/luma/payloads/", 0777);
-
-copy("romfs:/GodMode9.firm", "/luma/payloads/GodMode9.firm");
-
-mkdir("sdmc:/gm9/", 0777);
-mkdir("sdmc:/gm9/scripts/", 0777);
-
-printf("\n");
-
-Q = "GM9Megascript.gm9";
-O = "60KB";
-
-copy("romfs:/GM9Megascript.gm9", "/gm9/scripts/GM9Megascript.gm9");
-
-printf("\n");
-
-Q = "NANDManager.gm9";
-O = "7KB";
-
-copy("romfs:/NANDManager.gm9", "/gm9/scripts/NANDManager.gm9");
-}
-
-if (J == true){
-printf("\n");
-
-Q = "Luma v9.1";
-O = "182KB";
-
-copy("romfs:/boot.firm", "/boot.firm");
+copy("romfs:/ftpd.3dsx", "/3ds/ftpd.3dsx");
 }
 
 
 
-printf("\nDone! Install all the .cia files in FBI\nFBI should be installed in hblauncher now\nWaiting 5 Seconds til exit\n:D");
+printf("\nDone! Waiting 5 Seconds til exit\n:D");
 svcSleepThread(5000000000);
 
 	Exit:
